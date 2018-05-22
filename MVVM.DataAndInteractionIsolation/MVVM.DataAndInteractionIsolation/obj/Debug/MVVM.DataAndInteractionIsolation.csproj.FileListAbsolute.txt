@@ -1,0 +1,16 @@
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\bin\Debug\MVVM.DataAndInteractionIsolation.exe.config
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\bin\Debug\MVVM.DataAndInteractionIsolation.exe
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\bin\Debug\MVVM.DataAndInteractionIsolation.pdb
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation.csprojAssemblyReference.cache
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MainWindow.g.cs
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\App.g.cs
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation_MarkupCompile.cache
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation_MarkupCompile.lref
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MainWindow.baml
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation.g.resources
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation.Properties.Resources.resources
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation.csproj.GenerateResource.cache
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation.csproj.CoreCompileInputs.cache
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation.exe
+C:\Users\10167\source\repos\MVVM.DataAndInteractionIsolation\MVVM.DataAndInteractionIsolation\obj\Debug\MVVM.DataAndInteractionIsolation.pdb

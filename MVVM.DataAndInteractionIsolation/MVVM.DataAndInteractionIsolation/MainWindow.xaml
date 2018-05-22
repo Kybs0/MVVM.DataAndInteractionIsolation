@@ -1,0 +1,70 @@
+﻿<Window x:Class="MVVM.DataAndInteractionIsolation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVM.DataAndInteractionIsolation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Style>
+        <Style TargetType="local:MainWindow">
+            <Setter Property="ShowDeleteWaring" Value="{Binding ShowDeleteWaring.DelegateProgress}" />
+            <Setter Property="DeleteDatasAnimation" Value="{Binding DeleteDatasAnimation.DelegateProgress}" />
+        </Style>
+    </Window.Style>
+    <Window.Resources>
+        <Style TargetType="ListBox">
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="IsSelected" Value="{Binding IsSelected,Mode=OneWayToSource}" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border x:Name="RootBorder">
+                                        <Border.Resources>
+                                            <Storyboard x:Key="ItemRemovedStoryboard">
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="RootBorder" Storyboard.TargetProperty="Height">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="42" />
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0">
+                                                        <EasingDoubleKeyFrame.EasingFunction>
+                                                            <CubicEase EasingMode="EaseOut" />
+                                                        </EasingDoubleKeyFrame.EasingFunction>
+                                                    </EasingDoubleKeyFrame>
+                                                </DoubleAnimationUsingKeyFrames>
+                                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="RootBorder"
+                                                                   Storyboard.TargetProperty="Opacity">
+                                                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0" />
+                                                </DoubleAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </Border.Resources>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <CheckBox IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent},Path=IsSelected,Mode=TwoWay}" VerticalAlignment="Center"/>
+                                            <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="20"/>
+                                        </Grid>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="RootBorder" Property="Background" Value="LightGray" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <ListBox x:Name="DocumentListBox" ItemsSource="{Binding ItemsSource}" FocusVisualStyle="{x:Null}" SelectionMode="Extended" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent"/>
+
+            <Button Content="删除" Command="{Binding DeleteCommand}" Width="100" Height="30" Margin="40"/>
+        </StackPanel>
+    </Grid>
+</Window>
